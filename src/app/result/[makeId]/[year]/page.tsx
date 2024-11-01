@@ -26,8 +26,8 @@ const Page = async ({params}: { params: { makeId: string, year: string } }) => {
   return (
     <div className="flex gap-4 flex-col mt-8">
       {certainCar ?
-       (await certainCar).map((prod) => (
-         <div key={prod.Make_ID} className="mr-8 flex gap-8 border-2 border-red-600 border-solid p-5">
+       (await certainCar).map((prod, _) => (
+         <div key={_} className="mr-8 flex gap-8 border-2 border-red-600 border-solid p-5">
            <p>Make_ID: <b>{prod.Make_ID}</b></p>
            <p>Make_Name: <b>{prod.Make_Name}</b></p>
            <p>Model_ID: <b>{prod.Model_ID}</b></p>
