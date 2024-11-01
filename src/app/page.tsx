@@ -17,8 +17,9 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Menus />
+
       <a
-        className="block bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mt-9"
+        className={`block bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mt-9 ${!currentCar && !currentYear ? "pointer-events-none" : "pointer-events-auto"}`}
         href={`/result/${currentCar}/${currentYear}`}>Go to car page</a>
     </>
   );
